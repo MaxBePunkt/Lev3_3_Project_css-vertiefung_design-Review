@@ -126,6 +126,7 @@ h2 {
 */
 #secNoEins {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 5%;
   margin-bottom: 15%;
   font-family: Graphik-Medium;
@@ -136,17 +137,17 @@ h2 {
   line-height: 1.5;
   margin-right: 5%;
 }
-#secNoEins div:nth-of-type(2) {
-  width: 15%;
-}
+
 #secNoEins div:nth-of-type(2) p {
   font-family: Graphik-Regular;
   font-size: 3.5rem;
   margin-bottom: 10px;
 }
 #secNoEins span {
+  width: 95%;
   font-family: Theinhardt-Lt;
   color: #848689;
+  display: block;
 }
 /* 
 # # # # # # # # # # # # #
@@ -155,6 +156,7 @@ h2 {
 */
 #secNoZwei {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 15%;
 }
 #secNoZwei div {
@@ -187,6 +189,7 @@ h3 {
 #secNoDrei {
   background-color: #f1f1f4;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10%;
 }
 #secNoDrei div {
@@ -207,7 +210,6 @@ h3 {
   font-family: Theinhardt-Lt;
   font-size: 1.24rem;
 }
-
 /* 
 # # # # # # # # # # # # #
         secNoVier
@@ -276,4 +278,153 @@ footer div a {
 footer div a {
   color: #2b2c2e;
   text-decoration: none;
+}
+/* 
+##################################
+        MEDIA QUERIES
+##################################
+*/
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1%;
+  }
+  /* 
+##################################
+        HEADER
+##################################
+*/
+  /* 
+# # # # # # # # # # # # #
+        NAV
+# # # # # # # # # # # # #
+*/
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+  }
+  nav div {
+    width: 100%;
+    margin: 5% 0;
+  }
+  nav ul {
+    justify-content: space-around;
+  }
+
+  /* 
+# # # # # # # # # # # # #
+*/
+  header {
+    background: url("../img/home_hero.png") center/contain no-repeat;
+    height: 50vh;
+    padding: 5% 0 0 0;
+    text-align: center;
+  }
+
+  /* 
+##################################
+        MAIN
+##################################
+*/
+  /* 
+      # # # # # # # # # # # # #
+              secNoEins
+      # # # # # # # # # # # # #
+      */
+  #secNoEins {
+    align-items: center;
+  }
+  #secNoEins div:nth-of-type(1) {
+    width: 100%;
+    text-align: justify;
+    margin-right: 0;
+  }
+  #secNoEins div:nth-of-type(2) {
+    text-align: center;
+    width: 100%;
+    margin: 5%;
+  }
+  #secNoEins div:nth-of-type(2) p {
+    font-family: Graphik-Regular;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  #secNoEins span {
+    font-family: Theinhardt-Lt;
+    color: #848689;
+    display: block;
+  }
+  /* 
+# # # # # # # # # # # # #
+        secNoZwei
+# # # # # # # # # # # # #
+*/
+
+  #secNoZwei div {
+    width: 100%;
+  }
+  #secNoZwei img {
+    width: 95%;
+  }
+  #secNoZwei h2 {
+    text-align: center;
+  }
+  h3 {
+  }
+  #secNoZwei p,
+  #secNoDrei p,
+  #secNoVier p {
+    font-family: Theinhardt-Lt;
+    color: #848689;
+    font-size: 1.24rem;
+  }
+
+  /* 
+# # # # # # # # # # # # #
+        secNoDrei
+# # # # # # # # # # # # #
+*/
+
+  #secNoDrei div {
+    width: 100%;
+  }
+  #secNoDrei img {
+    width: 100%;
+  }
+  #secNoDrei h2 {
+    text-align: center;
+  }
+
+  /* 
+# # # # # # # # # # # # #
+        secNoVier
+# # # # # # # # # # # # #
+*/
+
+  #secNoVier article:nth-of-type(1) {
+    width: 100%;
+  }
+  #secNoVier p {
+    line-height: 1.5;
+  }
+  #secNoVier article:nth-of-type(2) {
+    background: url(../img/28.png) center top/cover no-repeat;
+    display: flex;
+    background-size: 120%;
+    margin-bottom: 10%;
+  }
+
+  #secNoVier article:nth-of-type(2) div:nth-of-type(1) {
+    padding: 24% 0 0 8%;
+    width: 70%;
+  }
+  #secNoVier article:nth-of-type(2) div p {
+    font-size: 0.8rem;
+  }
+  #secNoVier article:nth-of-type(2) div img {
+    width: 100%;
+  }
 }
